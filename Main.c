@@ -40,11 +40,6 @@ int configurarAssentos()
     printf("\nInforme o total de assentos para a sala:\n");
     scanf("%i", &totalAssentos);
 
-    if (!isnumber(totalAssentos))
-    {
-        printf("\ndigite um numero valido!");
-    }
-
     printf("\nsala configurada para %i assentos\n", totalAssentos);
     return (totalAssentos);
 }
