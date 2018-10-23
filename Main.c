@@ -81,7 +81,7 @@ int configurarAssentos(sala)
     if (sala != 0)
     {
         int continuar = -1;
-        printf("Sala ja configurada, deseja reconfigurar?\n1 - sim\n2 - nao");
+        printf("Sala ja configurada, deseja reconfigurar?\n1 - sim\n2 - nao\n");
         scanf("%d", &continuar);
 
         if (continuar == 2)
