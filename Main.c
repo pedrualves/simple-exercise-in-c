@@ -31,6 +31,8 @@ int main()
         case 4:
             sair();
             break;
+        default:
+            printf("\nOpcao invalida, tente novamente\n\n");
         }
     }
 }
