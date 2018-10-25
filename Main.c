@@ -96,7 +96,7 @@ int configurarAssentos(sala)
     scanf("%i", &totalAssentos);
 
     printf("\nsala configurada para %i assentos\n", totalAssentos);
-    return (totalAssentos);
+    return totalAssentos;
 }
 
 void sair()
