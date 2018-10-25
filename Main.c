@@ -2,10 +2,15 @@
 #import <stdlib.h>
 
 int menu();
-void sair();
 int configurarAssentos();
 int registrarReserva();
 int liberarReserva();
+
+void sair()
+{
+    printf("bye byeee\n\n");
+    exit(0);
+}
 
 int main()
 {
@@ -56,7 +61,7 @@ int registrarReserva(assentos, sala)
     }
     else
     {
-        printf("SALA CHEIA! Nao foi possivel registrar reserva\n\n");
+        printf("\nSALA CHEIA! Nao foi possivel registrar reserva\n\n");
     }
 
     return assentos;
@@ -72,7 +77,7 @@ int liberarReserva(assentos, sala)
     }
     else
     {
-        printf("SALA VAZIA! Nao existem reservas para remover\n\n");
+        printf("\nSALA VAZIA! Nao existem reservas para remover\n\n");
     }
     return assentos;
 }
@@ -97,10 +102,4 @@ int configurarAssentos(sala)
 
     printf("\nsala configurada para %i assentos\n", totalAssentos);
     return totalAssentos;
-}
-
-void sair()
-{
-    printf("bye byeee\n\n");
-    exit(0);
 }
