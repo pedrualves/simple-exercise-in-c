@@ -1,6 +1,5 @@
 #import <stdio.h>
 #import <stdlib.h>
-#include <ctype.h>
 
 int menu();
 void sair();
@@ -11,10 +10,12 @@ int liberarReserva();
 int main()
 {
     printf("\n\nBem vindo ao sistema de reservas:");
-    int opcao = 0;
+
+    int opcao;
     int sala = 0;
     int assentos = 0;
-    while (opcao != -1)
+
+    while (1)
     {
         opcao = menu();
         switch (opcao)
