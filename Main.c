@@ -1,52 +1,49 @@
 #import <stdio.h>
 #import <stdlib.h>
 
-char menu();
+int menu();
+void sair();
 int configurarAssentos();
 int registrarReserva();
 int liberarReserva();
-void sair();
 
 int main()
 {
     printf("\n\nBem vindo ao sistema de reservas:");
 
-    char opcao;
+    int opcao;
     int sala = 0;
     int assentos = 0;
 
     while (1)
     {
         opcao = menu();
-        if (opcao == '1')
+        switch (opcao)
         {
+        case 1:
             sala = configurarAssentos(sala);
-        }
-        else if (opcao == '2')
-        {
+            break;
+        case 2:
             assentos = registrarReserva(assentos, sala);
-        }
-        else if (opcao == '3')
-        {
+            break;
+        case 3:
             assentos = liberarReserva(assentos, sala);
-        }
-        else if (opcao == '4')
-        {
+            break;
+        case 4:
             sair();
-        }
-        else
-        {
+            break;
+        default:
             printf("\nOpcao invalida, tente novamente\n\n");
         }
     }
 }
 
-char menu()
+int menu()
 {
-    char ret;
+    int ret;
     printf("\nEscolha uma opcao:\n1 - configurar sala \n2 - confirmar reserva \n3 - liberar reserva \n4 - sair\n\n");
-    scanf(" %s", &ret);
-    return ret;
+    scanf("%i", &ret);
+    return (ret);
 }
 
 int registrarReserva(assentos, sala)
